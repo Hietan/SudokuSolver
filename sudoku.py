@@ -41,7 +41,7 @@ for i in N:
 		if problem[i][j]:
 			m += x[i][j][problem[i][j] - 1] == 1
 
-solver = pulp.CPLEX_CMD(msg = 0)
+solver = pulp.PULP_CBC_CMD(msg = 0)
 m.solve(solver)
 
 # %%
